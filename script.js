@@ -88,11 +88,36 @@ function playRound (humanChoice, computerChoice){
  }
 
 
-computerChoice = getComputerChoice();
+
+/*computerChoice = getComputerChoice();
 console.log(computerChoice);
 
 humanChoice = getHumanChoice();
-console.log(humanChoice);
+console.log(humanChoice);*/
 
-playRound(humanChoice, computerChoice);
-console.log(`Human Score: ${humanScore} - Computer Score: ${computerScore}`);
+// playRound(humanChoice, computerChoice);
+// console.log(`Human Score: ${humanScore} - Computer Score: ${computerScore}`);
+
+
+
+//computerChoice = getComputerChoice();
+//humanChoice = getComputerChoice();
+
+// playRound(computerChoice, humanChoice);
+
+
+// play full game - 5 rounds
+function playGame(){
+    for (let i = 1; i <= 5; ++i){
+        computerChoice = getComputerChoice();
+        console.log(computerChoice); //FOR TESTING 
+
+        humanChoice = getHumanChoice();
+        console.log(humanChoice);
+
+        playRound(humanChoice, computerChoice);
+        console.log(`Round ${i}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);
+    }
+}
+
+playGame();
