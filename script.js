@@ -20,9 +20,7 @@ function getComputerChoice() {
    }
 }
 
-//computerChoice = getComputerChoice();
-//console.log(computerChoice); //this is for testing only. Delete before final version
-
+// obtain human choice
 function getHumanChoice() {
     let answer;
     keepGoing = true;
@@ -39,9 +37,6 @@ function getHumanChoice() {
 
     return answer;
  }
-
- //humanChoice = getHumanChoice();
- // console.log(humanChoice); //this is for testing only. Delete before final version
 
 
  //Play a single round game
@@ -88,32 +83,10 @@ function playRound (humanChoice, computerChoice){
  }
 
 
-
-/*computerChoice = getComputerChoice();
-console.log(computerChoice);
-
-humanChoice = getHumanChoice();
-console.log(humanChoice);*/
-
-// playRound(humanChoice, computerChoice);
-// console.log(`Human Score: ${humanScore} - Computer Score: ${computerScore}`);
-
-
-
-//computerChoice = getComputerChoice();
-//humanChoice = getComputerChoice();
-
-// playRound(computerChoice, humanChoice);
-
-
-// play full game - 5 rounds
 function playGame(){
     for (let i = 1; i <= 5; ++i){
         computerChoice = getComputerChoice();
-        console.log(computerChoice); //FOR TESTING 
-
         humanChoice = getHumanChoice();
-        console.log(humanChoice);
 
         playRound(humanChoice, computerChoice);
         console.log(`Round ${i}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);
