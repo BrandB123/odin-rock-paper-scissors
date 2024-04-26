@@ -22,3 +22,23 @@ function getComputerChoice() {
 
 //computerChoice = getComputerChoice();
 //console.log(computerChoice); //this is for testing only. Delete before final version
+
+function getHumanChoice() {
+    let answer;
+    keepGoing = true;
+
+    while (keepGoing) {
+       answer = prompt("Type rock, paper, or scissors to select one: ");
+       answer = answer.toLowerCase();
+       if (answer != "rock" && answer != "paper" && answer != "scissors") {
+        console.log("Not a valid response");
+       } else {
+        keepGoing = false;
+       }
+    }
+
+    return answer;
+ }
+
+ //humanChoice = getHumanChoice();
+ // console.log(humanChoice); //this is for testing only. Delete before final version
