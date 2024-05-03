@@ -93,4 +93,19 @@ function playGame(){
     }
 }
 
-playGame();
+
+let rockButton = document.querySelector("#rock");
+let paperButton = document.querySelector("#paper");
+let scissorsButton = document.querySelector("#scissors");
+
+rockButton.addEventListener("click", () => {
+   alert("rock");
+});
+paperButton.addEventListener("click", () => {
+   alert("paper");
+});
+scissorsButton.addEventListener("click", () => {
+   alert("scissors");
+});
+
+//playGame();
