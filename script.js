@@ -108,7 +108,15 @@ rockButton.addEventListener("click", () => {
    humanChoice = "rock";
    computerChoice = getComputerChoice();
    playRound(humanChoice, computerChoice);
-   gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;
+   if (humanScore >= 5) {
+      roundResults.textContent = "";
+      gameScore.textContent = "You win!";
+   } else if (computerScore >= 5) {
+      roundResults.textContent = "";
+      gameScore.textContent = "You lose!";
+   } else {
+      gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;
+   }
 });
 paperButton.addEventListener("click", () => {
    //alert("paper");
@@ -116,14 +124,30 @@ paperButton.addEventListener("click", () => {
    humanChoice = "paper";
    computerChoice = getComputerChoice();
    playRound(humanChoice, computerChoice);
-   gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;
+   if (humanScore >= 5) {
+      roundResults.textContent = "";
+      gameScore.textContent = "You win!";
+   } else if (computerScore >= 5) {
+      roundResults.textContent = "";
+      gameScore.textContent = "You lose!";
+   } else {
+      gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;
+   }
 });
 scissorsButton.addEventListener("click", () => {
    //alert("scissors");
    roundCounter += 1;
    humanChoice = "scissors";   computerChoice = getComputerChoice();
    playRound(humanChoice, computerChoice);
-   gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;   
+   if (humanScore >= 5) {
+      roundResults.textContent = "";
+      gameScore.textContent = "You win!";
+   } else if (computerScore >= 5) {
+      roundResults.textContent = "";
+      gameScore.textContent = "You lose!";
+   } else {
+      gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;
+   }   
 });
 
 //playGame();
