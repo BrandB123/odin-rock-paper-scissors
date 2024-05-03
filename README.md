@@ -1,3 +1,3 @@
 # odin-rock-paper-scissors
 
-This game of rock, paper, scissors that is to be played in the console. It was built with boilerplate html and some basic JavaScript concepts. This demonstrates an understanding of basic JS syntax, such as variables, functions, conditional statements, return values, loops, etc.
+This is a game of rock, paper, scissors that was originally designed to be played in the console and was updated with a very basic UI for interaction from the webpage. It was built with basic html and some basic JavaScript concepts. This demonstrates an understanding of foundational JS syntax, such as variables, functions, conditional statements, return values, loops, DOM manipulation, eventListeners, etc.

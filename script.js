@@ -98,7 +98,6 @@ function updateRound() {
 }
 
 
-
 rockButton.addEventListener("click", function(e) {
    playRound(e);
 });
