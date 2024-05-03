@@ -85,7 +85,7 @@ function playRound (humanChoice, computerChoice){
  }
 
 
-function playGame(){
+/*function playGame(){
     for (let i = 1; i <= 5; ++i){
         computerChoice = getComputerChoice();
         humanChoice = getHumanChoice();
@@ -93,12 +93,14 @@ function playGame(){
         playRound(humanChoice, computerChoice);
         console.log(`Round ${i}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);
     }
-}
+}*/
 
 
 let rockButton = document.querySelector("#rock");
 let paperButton = document.querySelector("#paper");
 let scissorsButton = document.querySelector("#scissors");
+let roundResults = document.querySelector(".results");
+let gameScore = document.querySelector(".score");
 
 rockButton.addEventListener("click", () => {
    //alert("rock");
@@ -106,7 +108,7 @@ rockButton.addEventListener("click", () => {
    humanChoice = "rock";
    computerChoice = getComputerChoice();
    playRound(humanChoice, computerChoice);
-   console.log(`Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);
+   gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;
 });
 paperButton.addEventListener("click", () => {
    //alert("paper");
@@ -114,14 +116,14 @@ paperButton.addEventListener("click", () => {
    humanChoice = "paper";
    computerChoice = getComputerChoice();
    playRound(humanChoice, computerChoice);
-   console.log(`Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);
+   gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;
 });
 scissorsButton.addEventListener("click", () => {
    //alert("scissors");
    roundCounter += 1;
    humanChoice = "scissors";   computerChoice = getComputerChoice();
    playRound(humanChoice, computerChoice);
-   console.log(`Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);   
+   gameScore.textContent = `Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`;   
 });
 
 //playGame();
