@@ -7,6 +7,8 @@ let computerScore = 0;
 // create a variable for human score
 let humanScore = 0;
 
+let roundCounter = 0;
+
 // Obtain computer's choice
 function getComputerChoice() {
    let choice;
@@ -99,13 +101,27 @@ let paperButton = document.querySelector("#paper");
 let scissorsButton = document.querySelector("#scissors");
 
 rockButton.addEventListener("click", () => {
-   alert("rock");
+   //alert("rock");
+   roundCounter += 1;
+   humanChoice = "rock";
+   computerChoice = getComputerChoice();
+   playRound(humanChoice, computerChoice);
+   console.log(`Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);
 });
 paperButton.addEventListener("click", () => {
-   alert("paper");
+   //alert("paper");
+   roundCounter += 1;
+   humanChoice = "paper";
+   computerChoice = getComputerChoice();
+   playRound(humanChoice, computerChoice);
+   console.log(`Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);
 });
 scissorsButton.addEventListener("click", () => {
-   alert("scissors");
+   //alert("scissors");
+   roundCounter += 1;
+   humanChoice = "scissors";   computerChoice = getComputerChoice();
+   playRound(humanChoice, computerChoice);
+   console.log(`Round ${roundCounter}: Human Score: ${humanScore} - Computer Score: ${computerScore}`);   
 });
 
 //playGame();
